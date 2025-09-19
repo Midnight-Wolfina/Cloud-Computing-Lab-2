@@ -1,5 +1,9 @@
 name: Simple CI/CD Workflow
 
+on:
+  push:
+    branches:
+      - main  
 
 jobs:
   build:
