@@ -12,7 +12,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Build step
+      - name: Build steps
         run: echo "Build OK - HTML validated"
 
   deploy:
@@ -26,7 +26,7 @@ jobs:
         run: echo "Deployment successful to staging"
 
   upload-artifact:
-    runs-on: ubuntu-latest
+    run-on: ubuntu-latest
     needs: build
     steps:
       - name: Checkout repository
@@ -36,4 +36,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: webpage
-          path: html
+          path: Index.html
