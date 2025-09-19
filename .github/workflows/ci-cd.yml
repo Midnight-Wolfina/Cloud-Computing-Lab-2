@@ -26,7 +26,7 @@ jobs:
         run: echo "Deployment successful to staging"
 
   upload-artifact:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     needs: build
     steps:
       - name: Checkout repository
